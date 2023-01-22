@@ -1,5 +1,7 @@
 <?php
+
 use Illuminate\Support\Facades\Route;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -10,8 +12,13 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
 Route::get('/', function () {
-    return view('welcome');
-    });
-    Route::resource('/proyects','App\Http\Controllers\ProyectController');
-    
+    return view('index');
+});
+
+Route::resource('/proyects','App\Http\Controllers\ProyectController');
+
+Route::resource('user', 'App\Http\Controllers\LoginController');
+
+Route::post('/login', 'App\Http\Controllers\LoginController@login')->name('login');

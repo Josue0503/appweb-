@@ -18,7 +18,7 @@ label="Close"></button>
 <div class="col-lg-4">
 <div class="card shadow">
 <a href="proyects/{{ $row->id }}">
-<img src="{{ asset('storage/images/'.$row->image) }}" class="card-img-topimg-fluid">
+<img style="width: 100%" src="{{ asset('storage/images/'.$row->image) }}" class="card-img-topimg-fluid">
 </a>
 <div class="card-body">
 <p class="btn btn-success rounded-pill btn-sm">{{ $row->categories->nombre}}</p>
